@@ -5,5 +5,5 @@
 var module;
 
 module.exports = {
-    'url' : 'mongodb://mongouser:d3Mongodb@10.0.0.19:27017/d3nodeexpressmongoDB'
+    'url' : 'mongodb://127.0.0.1:27017/d3nodeexpressmongoDB'
 };

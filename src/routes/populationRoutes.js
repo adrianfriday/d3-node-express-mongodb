@@ -23,7 +23,8 @@ var getPopulations = function ( ) {
                     
                     var collection = db.collection('populations');
 
-                    collection.find({}, {fields: {_id: 0}}).toArray(function (err, results) {
+                    // collection.find({}, {fields: {_id: 0}}).toArray(function (err, results) {
+                    collection.find({}, {_id: 0}).toArray(function (err, results) {
 
                     if (err) {
                         console.error(err);
@@ -33,7 +34,8 @@ var getPopulations = function ( ) {
                             err:    err.code
                         });
                     }
-                        res.send(results[0]);
+                        // AJF res.send(results[0]);
+                        res.send(results);
                     });
                 };
 
@@ -49,5 +51,3 @@ var getPopulations = function ( ) {
 module.exports = {
   getPopulations: getPopulations
 };
-                         
-                         
